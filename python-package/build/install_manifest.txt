@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/tmp/tmpw6nmflq8/wheel/platlib/lightgbm/lib/lib_lightgbm.so

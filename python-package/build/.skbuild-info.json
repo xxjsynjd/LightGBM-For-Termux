@@ -1,0 +1,8 @@
+{
+  "source_dir": "/data/data/com.termux/files/home/LightGBM/python-package",
+  "build_dir": "/data/data/com.termux/files/home/LightGBM/python-package/build",
+  "cmake_path": "/data/data/com.termux/files/usr/bin/cmake",
+  "skbuild_path": "/data/data/com.termux/files/usr/lib/python3.14/site-packages/scikit_build_core",
+  "skbuild_version": "1.1.2",
+  "python_executable": "/data/data/com.termux/files/usr/bin/python3.14"
+}
