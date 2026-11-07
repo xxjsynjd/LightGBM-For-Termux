@@ -58,7 +58,7 @@ jobs:
           #   python_version: '3.9'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 5
           submodules: true
@@ -86,7 +86,7 @@ jobs:
           $GITHUB_WORKSPACE/.ci/test.sh || exit 1
       - name: upload wheels
         if: ${{ matrix.method == 'wheel' && matrix.os == 'macos-14' }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: macosx-arm64-wheel
           path: dist/*.whl
@@ -96,7 +96,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 5
           submodules: true
@@ -123,7 +123,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 5
           submodules: true
@@ -150,6 +150,6 @@ jobs:
     needs: [test, test-latest-versions, test-oldest-versions]
     steps:
     - name: Note that all tests succeeded
-      uses: re-actors/alls-green@v1.2.2
+      uses: re-actors/alls-green@v1.3.0
       with:
         jobs: ${{ toJSON(needs) }}

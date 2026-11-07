@@ -109,7 +109,7 @@ jobs:
           apt-get install --no-install-recommends -y \
               git
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 5
           submodules: true
@@ -130,6 +130,6 @@ jobs:
     needs: [test]
     steps:
     - name: Note that all tests succeeded
-      uses: re-actors/alls-green@v1.2.2
+      uses: re-actors/alls-green@v1.3.0
       with:
         jobs: ${{ toJSON(needs) }}
